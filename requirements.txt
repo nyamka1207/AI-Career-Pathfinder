@@ -1,4 +1,3 @@
-streamlit
-scikit-learn
 numpy
-plotly
+scikit-learn
+streamlit
