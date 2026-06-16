@@ -307,8 +307,8 @@ def train_model():
     df = pd.DataFrame(rows, columns=feature_cols)
     df["career"] = labels
 
-    X = df[feature_cols].values
-    y = df["career"].values
+    X = df[feature_cols].to_numpy(dtype=np.float64)
+    y = df["career"].to_numpy(dtype=str)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
